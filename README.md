@@ -9,6 +9,7 @@
 ## 目录 / Table of Contents
 
 - [这是什么 / What Is This](#这是什么--what-is-this)
+- [功能说明 / Capabilities](#功能说明--capabilities)
 - [快速开始 / Quick Start](#快速开始--quick-start)
   - [方式一：作为 Trae Skill 使用](#方式一作为-trae-skill-使用)
   - [方式二：作为 Claude Code 使用](#方式二作为-claude-code-使用)
@@ -20,6 +21,7 @@
 - [章节参考 / Chapter Reference](#章节参考--chapter-reference)
 - [方法选择指南 / Method Selection Guide](#方法选择指南--method-selection-guide)
 - [文件统计 / File Statistics](#文件统计--file-statistics)
+- [优化方向 / Future Improvements](#优化方向--future-improvements)
 - [许可证 / License](#许可证--license)
 
 ---
@@ -35,6 +37,57 @@
 **For humans**: A structured HCI research learning resource with 16 chapters of textbook content, learning guides, and quick-reference scales.
 
 **For AI**: A cross-platform prompt system that turns AI into an HCI research methodology expert — helping you design experiments, choose methods, analyze data, and write papers.
+
+---
+
+## 功能说明 / Capabilities
+
+### 能做什么 / What It Can Do
+
+| 功能 / Feature | 说明 / Description | 示例 / Example |
+|----------------|-------------------|----------------|
+| **实验方案设计** | 通过交互式问答引导你设计完整的研究方案 | "我想比较两种界面设计哪个更好" |
+| **方法推荐** | 根据研究目标、数据类型、环境推荐合适的 HCI 研究方法 | "我应该用访谈还是问卷？" |
+| **统计方法指导** | 根据你的数据类型推荐统计分析方法 | "我有两组定量数据，该用什么检验？" |
+| **知识点解答** | 回答 HCI 研究方法相关问题，引用教科书内容 | "什么是 SUS 量表？怎么计分？" |
+| **论文写作辅助** | 提供论文结构框架、方法描述规范、结果报告格式 | "实验方法部分怎么写？" |
+| **伦理审查提醒** | 始终提醒研究伦理注意事项 | 知情同意、数据隐私、IRB 审批 |
+
+### 交互流程 / Interaction Flow
+
+```
+你：我想研究两种界面设计哪个更好
+
+AI：你的主要研究目标是什么？
+    A) 评估设计  B) 比较方案  C) 探索需求  D) 测量性能
+
+你：B
+
+AI：你需要什么类型的数据？
+    A) 定量  B) 定性  C) 混合
+
+你：A
+
+AI：基于你的回答，推荐以下方法：
+    1. 实验研究（Ch 3）★★★★★ — 因果关系、受控比较
+    2. A/B 测试（Ch 5）★★★★☆ — 大规模对比
+    
+    你想深入了解哪个方法？
+
+你：1
+
+AI：（引导你逐步设计实验：变量、设计类型、样本量、统计方法...）
+```
+
+### 不能做什么 / Limitations
+
+| 不能做 / Cannot Do | 原因 / Reason |
+|-------------------|---------------|
+| 运行统计代码 | 这是方法指导工具，不是编程工具 |
+| 代写完整论文 | 只能提供框架和建议，不能替代你的写作 |
+| 替代专家判断 | 复杂研究仍需咨询有经验的研究者 |
+| 超出教科书范围 | 眼动仪、深度学习等高级主题不在教科书内 |
+| 收集和分析你的数据 | 无法访问你的实际数据文件 |
 
 ---
 
@@ -269,6 +322,54 @@ hci-research-guide/
 | 适配器 / Adapters | 4 |
 | 学习指南 / Learning guide | 12 |
 | **总计 / Total** | **100** |
+
+---
+
+## 优化方向 / Future Improvements
+
+### 内容扩展 / Content Expansion
+
+| 方向 / Direction | 说明 / Description | 优先级 |
+|------------------|-------------------|--------|
+| 补充学习指南缺失章节 | 创建启发式实验、参与式观察、日记研究等指南文件 | 高 |
+| 添加更多量表速查 | PANAS、NASA-TLX 详细版、SUS 中文版等 | 中 |
+| 补充第二部分学习资料 | 数据采集、数据分析、算法优化指南 | 中 |
+| 添加实际案例库 | 真实的 HCI 研究案例分析 | 中 |
+
+### 交互体验 / Interaction Experience
+
+| 方向 / Direction | 说明 / Description | 优先级 |
+|------------------|-------------------|--------|
+| 增加示例对话 | 添加更多典型场景的对话示例 | 高 |
+| 优化方法决策树 | 增加更多分支和判断条件 | 中 |
+| 添加模板生成 | 知情同意书、研究方案、问卷模板 | 中 |
+| 支持多轮对话记忆 | 记住用户之前的研究背景 | 低 |
+
+### 知识更新 / Knowledge Update
+
+| 方向 / Direction | 说明 / Description | 优先级 |
+|------------------|-------------------|--------|
+| 补充新方法 | 远程用户测试、AI 辅助研究等新方法 | 中 |
+| 更新教科书引用 | 如果有新版教科书，更新内容 | 低 |
+| 添加中文术语对照表 | 统一 HCI 领域中英术语 | 中 |
+
+### 技术改进 / Technical Improvement
+
+| 方向 / Direction | 说明 / Description | 优先级 |
+|------------------|-------------------|--------|
+| 添加自动化测试脚本 | 验证知识库完整性和正确性 | 中 |
+| 支持更多平台适配器 | Windsurf、Cline 等新工具 | 低 |
+| 优化 Prompt 性能 | 减少 token 消耗，提高响应速度 | 低 |
+| 添加 CI/CD | 自动验证和部署 | 低 |
+
+### 需要收集的数据 / Data to Collect
+
+| 数据类型 / Data Type | 用途 / Purpose | 收集方式 |
+|---------------------|---------------|---------|
+| 用户反馈 | 了解哪些功能有用，哪些需要改进 | GitHub Issues |
+| 使用场景 | 记录用户的实际使用方式 | 对话记录 |
+| 错误报告 | 发现知识库中的错误或遗漏 | 用户反馈 |
+| 方法推荐准确性 | 验证推荐方法是否合适 | 用户评价 |
 
 ---
 
